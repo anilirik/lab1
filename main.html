@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Photo galery</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+var denyImg = 25;
+
+function changeByName(img1, img2, bigImg1, bigImg2, fullImg1, fullImg2)
+{
+	var d=document
+
+	var b=d.images[img1].src
+	d.images[img1].src=d.images[img2].src
+	d.images[img2].src=b
+	
+	b=d.images[bigImg1].src
+	d.images[bigImg1].src=d.images[bigImg2].src
+	d.images[bigImg2].src=b
+	
+	b=d.images[fullImg1].src
+	d.images[fullImg1].src=d.images[fullImg2].src
+	d.images[fullImg2].src=b
+}
+
+function changeRandom()
+{
+	var imagesCount = 12;
+	var img1 = Math.floor(Math.random() * imagesCount + 1);
+	var img2 = Math.floor(Math.random() * imagesCount + 1);
+	
+	if (img1 == img2)
+	{
+		img2 = Math.floor(Math.random() * imagesCount);
+	}
+	
+	while (img1 == denyImg || img2 == denyImg)
+	{
+		var img1 = Math.floor(Math.random() * imagesCount + 1);
+		var img2 = Math.floor(Math.random() * imagesCount + 1);
+	}
+	
+	changeByName("img" + img1, "img" + img2, "imgBig" + img1, "imgBig" + img2, "imgFull" + img1, "imgFull" + img2);
+}
+
+window.onload = function()
+{
+	setInterval(changeRandom, 3000);
+}
+
+</script>
+
+</head>
+<body id="main">
+<ul class="galery">
+<li>
+    <div class="gItem">
+    	<a href="#image1">
+    		<img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1233/1233_original.jpg" width="150px" height="150px" name="img1" border="0" onMouseOver="window.denyImg=1;" onMouseOut="window.denyImg=1" />
+	        <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1233/1233_original.jpg" width="250px" height="250px" name="imgBig1" /></span>
+        </a>
+        <div class="enlarge" id="image1">
+			<a href="main.html">
+        		<img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1233/1233_original.jpg" name="imgFull1" />
+            </a>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+        <a href="#image2">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1443/1443_original.jpg" width="150px" height="150px" name="img2" border="0" onMouseOver="window.denyImg=2;" onMouseOut="window.denyImg=2" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1443/1443_original.jpg" width="250px" height="250px" name="imgBig2"/></span>
+        </a>
+        <div class="enlarge" id="image2">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1443/1443_original.jpg" name="imgFull2" />
+        </a>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image3">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1736/1736_original.jpg" width="150px" height="150px" name="img3" border="0" onMouseOver="window.denyImg=3;" onMouseOut="window.denyImg=3" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1736/1736_original.jpg" width="250px" height="250px" name="imgBig3" /></span>
+		</a>
+		<div class="enlarge" id="image3">
+            <a href="main.html">
+                <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1736/1736_original.jpg" name="imgFull3" />
+            </a>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image4">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1968/1968_original.jpg" width="150px" height="150px" name="img4" border="0" onMouseOver="window.denyImg=4;" onMouseOut="window.denyImg=4" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1968/1968_original.jpg" width="250px" height="250px" name="imgBig4" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image4">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/1968/1968_original.jpg" name="imgFull4" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image5">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2204/2204_original.jpg" width="150px" height="150px" name="img5" border="0" onMouseOver="window.denyImg=5;" onMouseOut="window.denyImg=5" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2204/2204_original.jpg" width="250px" height="250px" name="imgBig5" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image5" margin-top="260px">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2204/2204_original.jpg" name="imgFull5" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image6">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2344/2344_original.jpg" width="150px" height="150px" name="img6" border="0" onMouseOver="window.denyImg=6;" onMouseOut="window.denyImg=6" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2344/2344_original.jpg" width="250px" height="250px" name="imgBig6" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image6">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2344/2344_original.jpg" name="imgFull6" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image7">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2693/2693_original.jpg" width="150px" height="150px" name="img7" border="0" onMouseOver="window.denyImg=7;" onMouseOut="window.denyImg=7" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2693/2693_original.jpg" width="250px" height="250px" name="imgBig7" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image7">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2693/2693_original.jpg" name="imgFull7" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image8">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2993/2993_original.jpg" width="150px" height="150px" name="img8" border="0" onMouseOver="window.denyImg=8;" onMouseOut="window.denyImg=8" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2993/2993_original.jpg" width="250px" height="250px" name="imgBig8" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image8">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/2993/2993_original.jpg" name="imgFull8" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image9">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3198/3198_original.jpg" width="150px" height="150px" name="img9" border="0" onMouseOver="window.denyImg=9;" onMouseOut="window.denyImg=9" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3198/3198_original.jpg" width="250px" height="250px" name="imgBig9" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image9">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3198/3198_original.jpg" name="imgFull9" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image10">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3470/3470_original.jpg" width="150px" height="150px" name="img10" border="0" onMouseOver="window.denyImg=10;" onMouseOut="window.denyImg=10" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3470/3470_original.jpg" width="250px" height="250px" name="imgBig10" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image10">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3470/3470_original.jpg" name="imgFull10" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image11">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3622/3622_original.jpg" width="150px" height="150px" name="img11" border="0" onMouseOver="window.denyImg=11;" onMouseOut="window.denyImg=11" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3622/3622_original.jpg" width="250px" height="250px" name="imgBig11" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image11">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3622/3622_original.jpg" name="imgFull11" />
+        </a>
+    </div>
+</li>
+<li>
+    <div class="gItem">
+		<a href="#image12">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3921/3921_original.jpg" width="150px" height="150px" name="img12" border="0" onMouseOver="window.denyImg=12;" onMouseOut="window.denyImg=12" />
+            <span><img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3921/3921_original.jpg" width="250px" height="250px" name="imgBig12" /></span>
+		</a>
+    </div>
+    <div class="enlarge" id="image12">
+        <a href="main.html">
+            <img alt="" src="http://ic.pics.livejournal.com/anilirik/17567756/3921/3921_original.jpg" name="imgFull12" />
+        </a>
+    </div>
+</li>
+</ul>
+
+</body>
+</html>
